@@ -1,0 +1,27 @@
+### Configuration file for VK_scrapper.py
+xlsx_file_name: "filename.xlsx"    # enter .xlsx file name in which URLs meant to be scrapped are stored.
+URLs_column: "B"      # enter column which contain URLs to be processed (letter indexed).
+views_column: "C"     # enter column to which views will be saved (letter indexed).
+date_column: "D"      # enter column to which date will be saved (letter indexed).
+starting_row: 2       # enter row number (1 indexed) from which program will start processing the file.
+wait_time: 0.25       # pause between each request, lowering this parameter might result in shadow ban.
+
+### Below lines applies only to asynchronous program version.
+async_size: 3               # defines how many asynchronus connections will happen at one time.
+async_wait_time: 0.25       # pause between each asynchronous requests, lowering this parameter 
+                            # might result in shadow ban.
+
+# I've put those proxies only as an example (they won't be working for sure).
+# If you want to use asynchronus version you need them for script to work.
+## If you don't have any proxies avaiable you can still use asynchronus version, 
+## but probably you won't be able to scrape all sites because of VK shadow ban.
+proxies:
+    # 0:
+    #   'https': 'https://135.181.142.54:3127'
+    #   'http': 'https://135.181.142.54:3127'
+    # 1:
+    #   'https': 'https://95.216.12.141:22215'
+    #   'http': 'https://95.216.12.141:22215'
+    1:
+      'https': ''
+      'http': ''
